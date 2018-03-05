@@ -3,10 +3,15 @@ body{
 }
 .col-md-4{
     background-color: red;
-    height: 200px;
 }
 .requestsfort td{
     background-color: white;
     padding-bottom: 30px;
     padding-right: 10px;
+}
+.fields_table{
+    width: 100%;
+}
+.fields_table td{
+    padding-bottom: 20px;
 }

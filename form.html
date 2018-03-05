@@ -29,22 +29,40 @@
     <body>
         <!--- Header for application. Containts title, SEFI logo and MSU logo --->
         <div id="header" class="jumbotron">
-            <h1>SEFI Fillout Form</h1> 
-            <p>Submit your app here, yo</p> 
+          <h1>SEFI Fillout Form</h1> 
+          <p>Submit your app here, yo</p> 
         </div>
 
-        <!--- One part of the form --->
-        <form>
-            <label>Organization Name <input type="text" id="firstname" placeholder="i.e. John"/></label><br>
-            <label>Address: <input type="text" id="lastname" placeholder="i.e. Smith"/></label><br>
-            <label>Middle Initial: <input type="text" id="middlename" /></label><br>
-            <label>Phone: <input type="tel" id="ph-number" /></label><br>
-            <label>Director And/Or Contact: <input type="tel" id="ph-number" /></label><br>
-            <label>Email: <input type="email" id="password" length="10" placeholder="email"/></label><br>
+        <!--- Row 1 of the form, to enter name, address, etc. --->
+        <div class="row">
+          <form>
+            <div class="col-md-6">
+                <!--- Table holding labels and fields --->
+              <table class="fields_table">
+                  <tr><td><label>Organization Name</label></td><td><input type="text" id="prgname" placeholder="Name"/></td></tr>
+                  <tr><td><label>Address:</label></td><td><input type="text" id="address" placeholder="123 Street St."/></td></tr>
+                  <tr><td><label>Phone:</label></td><td><input type="tel" id="ph-number" /></td></tr>
+              </table>
+            </div>
+            <div class="col-md-6">
+<!--
+              <table class="fields_table">
+                <label>NJ County: <input type="text" id="middlename" /></label><br>
+                <label>Director And/Or Contact: <input type="tel" id="ph-number" /></label><br>
+                <label>Email: <input type="email" id="password" length="10" placeholder="email"/></label><br>
+              </table>
+-->
+              <table class="fields_table">
+                  <tr><td><label>NJ County: </label></td><td><input type="text" id="county" /></td></tr>
+                  <tr><td><label>Address:</label></td><td><input type="text" id="address" placeholder="123 Street St."/></td></tr>
+                  <tr><td><label>Phone:</label></td><td><input type="tel" id="ph-number" /></td></tr>
+              </table>
+            </div>
+            </form>
+        </div>
             <textarea id = "description" rows=25 cols=50></textarea><br>
             <input type="text" /><br>
             <button type="button" class="btn btn-primary btn-lg" onClick="fillin()">Large button</button>
-        </form>
         <form>
             <input type="radio" name="hi" value="yes" />Yes<br>
             <input type="radio" name="hi" value="no"/ >No
@@ -75,7 +93,6 @@
                 </table>
             </div>
             <div class="col-md-1"></div>
-            <div class="col-md-6"></div>
             <div class="col-md-1"></div>
             <div class="col-md-4"></div>
             <div class="col-md-1"></div>

@@ -1,0 +1,12 @@
+body{
+    background-color: aqua;
+}
+.col-md-4{
+    background-color: red;
+    height: 200px;
+}
+.requestsfort td{
+    background-color: white;
+    padding-bottom: 30px;
+    padding-right: 10px;
+}

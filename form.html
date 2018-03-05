@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>SEFI Form</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="formstyle.css">
+        <style>
+            textarea{
+                font-family: sans-serif;
+            }
+            #header{
+                background-color: darkgray;
+                padding-left: 20px;
+            }
+            input{
+                border-radius: 4px;
+            }
+        </style>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+        function fillin()
+            {
+                var array = ["shut up", "get a life", "eat turd", "watch me whip", "im gonna pop some tags", "walk into the club like whaddup got a big co-"];
+                var index = Math.floor(Math.random()*array.length);
+                var message = array[index];
+                document.getElementById("description").innerHTML = message;
+            }
+        </script>
+    </head>
+    <body>
+        <!--- Header for application. Containts title, SEFI logo and MSU logo --->
+        <div id="header" class="jumbotron">
+            <h1>SEFI Fillout Form</h1> 
+            <p>Submit your app here, yo</p> 
+        </div>
+
+        <!--- One part of the form --->
+        <form>
+            <label>Organization Name <input type="text" id="firstname" placeholder="i.e. John"/></label><br>
+            <label>Address: <input type="text" id="lastname" placeholder="i.e. Smith"/></label><br>
+            <label>Middle Initial: <input type="text" id="middlename" /></label><br>
+            <label>Phone: <input type="tel" id="ph-number" /></label><br>
+            <label>Director And/Or Contact: <input type="tel" id="ph-number" /></label><br>
+            <label>Email: <input type="email" id="password" length="10" placeholder="email"/></label><br>
+            <textarea id = "description" rows=25 cols=50></textarea><br>
+            <input type="text" /><br>
+            <button type="button" class="btn btn-primary btn-lg" onClick="fillin()">Large button</button>
+        </form>
+        <form>
+            <input type="radio" name="hi" value="yes" />Yes<br>
+            <input type="radio" name="hi" value="no"/ >No
+        </form>
+        <div style="background-color: red; height: 3px;"></div>
+        <div class="requestsfort">
+        <h1>Requests for Training</h1>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+                <h3>Types of Training (select one)</h3>
+                <table class="single-cell">
+                <form>
+                    <tr><td>
+                        <input type="radio" name="trainingtype" value="keepingbabies" />Keeping babies and Children in Mind
+                    </td></tr>
+                    <tr>
+                        <td>
+                        <input type="radio" name="trainingtype" value="pyramid" />Pyramid Model
+                    </td></tr>
+                    <tr><td>
+                        <input type="radio" name="trainingtype" value="security" />Circle of Security
+                    </td></tr>
+                    <tr><td>
+                        <input type="radio" name="trainingtype" value="brzelton" />Brazelton Touchpoints
+                    </td></tr>
+                </form>
+                </table>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-6"></div>
+            <div class="col-md-1"></div>
+            <div class="col-md-4"></div>
+            <div class="col-md-1"></div>
+        </div>
+        </div>
+    </body>
+
+
+</html>

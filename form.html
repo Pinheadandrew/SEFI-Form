@@ -34,7 +34,7 @@
         </div>
 
         <!--- Row 1 of the form, to enter name, address, etc. --->
-        <div class="row">
+        <div class="row basic-info-row">
           <form>
             <div class="col-md-6">
                 <!--- Table holding labels and fields --->
@@ -45,13 +45,6 @@
               </table>
             </div>
             <div class="col-md-6">
-<!--
-              <table class="fields_table">
-                <label>NJ County: <input type="text" id="middlename" /></label><br>
-                <label>Director And/Or Contact: <input type="tel" id="ph-number" /></label><br>
-                <label>Email: <input type="email" id="password" length="10" placeholder="email"/></label><br>
-              </table>
--->
               <table class="fields_table">
                   <tr><td><label>NJ County: </label></td><td><input type="text" id="county" /></td></tr>
                   <tr><td><label>Address:</label></td><td><input type="text" id="address" placeholder="123 Street St."/></td></tr>
@@ -60,15 +53,34 @@
             </div>
             </form>
         </div>
+        <!--- Row 2 of the form, for GNJK information. --->
+        <div class="row basic-info-row">
+          <form>
+            <div class="col-md-6">
+                <!--- Table holding labels and fields --->
+              <table class="fields_table">
+                  <tr><td><label>GNJK TAS Name: </label></td><td><input type="text" id="gnjkname" placeholder="Name"/></td></tr>
+                  <tr><td><label>GNJK TAS Phone:</label></td><td><input type="text" id="gnjkphone" placeholder="123 Street St."/></td></tr>
+                  <tr><td><label>GNJK TAS Email:</label></td><td><input type="tel" id="gnjkemail" /></td></tr>
+              </table>
+            </div>
+            <div class="col-md-6">
+              <table class="fields_table">
+                  <tr><td><label>Date of GNJK Transition to TAC: </label></td><td><input type="text" id="gnjktransdate" /></td></tr>
+                  <tr><td><label>GNJK Region:</label></td><td><input type="text" id="gnjkregion" placeholder="123 Street St."/></td></tr>
+                  <tr><td><label># of Classrooms:</label></td><td>
+                    Infant/Toddler:<input class="numberfield" type="number" />
+                    Preschool:<input class="numberfield" type="number"/>
+                      </td></tr>
+              </table>
+            </div>
+            </form>
+        </div>
+        <!--- End of row 2 --->
+        
             <textarea id = "description" rows=25 cols=50></textarea><br>
-            <input type="text" /><br>
             <button type="button" class="btn btn-primary btn-lg" onClick="fillin()">Large button</button>
-        <form>
-            <input type="radio" name="hi" value="yes" />Yes<br>
-            <input type="radio" name="hi" value="no"/ >No
-        </form>
-        <div style="background-color: red; height: 3px;"></div>
-        <div class="requestsfort">
+        <div class="requestsfort basic-info-row">
         <h1>Requests for Training</h1>
         <div class="row">
             <div class="col-md-1"></div>
@@ -94,7 +106,14 @@
             </div>
             <div class="col-md-1"></div>
             <div class="col-md-1"></div>
-            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <h3>Preferred Day and Time</h3>
+                <table class="fields_table">
+                  <tr><td><label>Duration: </label></td><td><input type="text" id="county" /></td></tr>
+                  <tr><td><label>Time:</label></td><td><input type="text" id="address" placeholder="123 Street St."/></td></tr>
+                  <tr><td><label>Day:</label></td><td><input type="tel" id="ph-number" /></td></tr>
+              </table>
+            </div>
             <div class="col-md-1"></div>
         </div>
         </div>

@@ -3,18 +3,6 @@
         <title>SEFI Form</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link type="text/css" rel="stylesheet" href="formstyle.css">
-        <style>
-            textarea{
-                font-family: sans-serif;
-            }
-            #header{
-                background-color: darkgray;
-                padding-left: 20px;
-            }
-            input{
-                border-radius: 4px;
-            }
-        </style>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script>
         function fillin()
@@ -27,8 +15,8 @@
         </script>
     </head>
     <body>
-        <!--- Header for application. Containts title, SEFI logo and MSU logo --->
-        <div id="header" class="jumbotron">
+      <!--- Header for application. Containts title, SEFI logo and MSU logo --->
+				<div id="header" class="jumbotron">
           <h1>SEFI Fillout Form</h1> 
           <p>Submit your app here, yo</p> 
         </div>
@@ -66,67 +54,79 @@
             </div>
             <div class="col-md-6">
               <table class="fields_table">
-                  <tr><td><label>Date of GNJK Transition to TAC: </label></td><td><input type="text" id="gnjktransdate" /></td></tr>
+                <tr><td><label>Date of GNJK Transition to TAC: </label></td><td><input type="text" id="gnjktransdate" /></td></tr>
                   <tr><td><label>GNJK Region:</label></td><td><input type="text" id="gnjkregion" placeholder="123 Street St."/></td></tr>
                   <tr><td><label># of Classrooms:</label></td><td>
                     Infant/Toddler:<input class="numberfield" type="number" />
                     Preschool:<input class="numberfield" type="number"/>
                       </td></tr>
               </table>
+            
             </div>
             </form>
         </div>
+			
         <!--- End of row 2 --->
-        
-            <textarea id = "description" rows=25 cols=50></textarea><br>
-            <button type="button" class="btn btn-primary btn-lg" onClick="fillin()">Large button</button>
+        <!--- "Requests for Training --->
+        <textarea id = "description" rows=25 cols=50></textarea><br>
+        <button type="button" class="btn btn-primary btn-lg" onClick="fillin()">Large button</button>
         <div class="requestsfort basic-info-row">
-        <h1>Requests for Training</h1>
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-4">
-                <h3>Types of Training (select one)</h3>
-                <table class="single-cell">
-                <form>
-                    <tr><td>
-                        <input type="radio" name="trainingtype" value="keepingbabies" />Keeping babies and Children in Mind
-                    </td></tr>
-                    <tr>
-                        <td>
-                        <input type="radio" name="trainingtype" value="pyramid" />Pyramid Model
-                    </td></tr>
-                    <tr><td>
-                        <input type="radio" name="trainingtype" value="security" />Circle of Security
-                    </td></tr>
-                    <tr><td>
-                        <input type="radio" name="trainingtype" value="brzelton" />Brazelton Touchpoints
-                    </td></tr>
-                </form>
-                </table>
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-1"></div>
-            <!--- Preferred day and time column. Rows for each radio/button group --->
-            <div class="col-md-4">
-                <h3>Preferred Day and Time</h3>
-                <table class="fields_table">
-                  <tr><td><label>Duration: </label></td><td><input type="radio" value="fullday" />Full Day <input type="radio" value="halfday" />Half Day </td></tr>
-                  <tr><td><label>Time: </label></td><td><input type="radio" value="morning" />Morning <input type="radio" value="afternoon" />Afternoon <input type="radio" value="evening" />Evening 
-                  </td></tr>
-                    <tr><td><label>Day:</label></td><td><em>WEEKDAY:</em>
-                        <input type="radio" value="mon" />Mon.
-                        <input type="radio" value="tues" />Tues.
-                        <input type="radio" value="wed" />Wed.
-                        <input type="radio" value="thurs" />Thurs.
-                        <input type="radio" value="fri" />Fri.
-                  </td></tr>
-                  <tr><td></td><td><input type="tel" id="ph-number" /></td></tr>
-              </table>
-            </div>
-            <div class="col-md-1"></div>
+        	<h1>Requests for Training</h1>
+					<div class="row">
+						<div class="col-md-1"></div>
+							<div class="col-md-4">
+								<h3 class="subheaders">Types of Training (select one)</h3>
+								<table class="single-cell">
+								<form>
+									<tr><td>
+										<input type="radio" name="trainingtype" value="keepingbabies" />Keeping babies and Children in Mind
+									</td></tr>
+									<tr>
+										<td>
+											<input type="radio" name="trainingtype" value="pyramid" />Pyramid Model
+									</td></tr>
+									<tr><td>
+										<input type="radio" name="trainingtype" value="security" />Circle of Security
+									</td></tr>
+									<tr><td>
+										<input type="radio" name="trainingtype" value="brzelton" />Brazelton Touchpoints
+									</td></tr>
+								</form>
+								</table>
+							</div>
+							<div class="col-md-1"></div>
+							<div class="col-md-1"></div>
+							<!--- Preferred day and time column. Rows for each radio/button group --->
+							<div class="col-md-4">
+								<h3 class="subheaders">Preferred Day and Time</h3>
+								<table class="fields_table">
+									<tr><td><label>Duration: </label></td><td><input type="radio" value="fullday" />Full Day <input type="radio" value="halfday" />Half Day </td></tr>
+									<tr><td><label>Time: </label></td><td><input type="radio" value="morning" />Morning <input type="radio" value="afternoon" />Afternoon <input type="radio" value="evening" />Evening 
+									</td></tr>
+									<tr><td><label>Day:</label></td><td><em>WEEKDAY:</em>
+										<input type="radio" value="mon" />Mon.
+										<input type="radio" value="tues" />Tues.
+										<input type="radio" value="wed" />Wed.
+										<input type="radio" value="thurs" />Thurs.
+										<input type="radio" value="fri" />Fri.
+									</td></tr>
+									<tr><td></td><td><input type="tel" id="ph-number" /></td></tr>
+								</table>
+							</div>
+						<div class="col-md-1"></div>
+					</div>
         </div>
-        </div>
+				<div class="basic-info-row">
+					<div>
+						<h1>Request For Support</h1>
+						<h4 class="subheaders">Accompanying Documentation:</h4>
+						<ul class="coolbullets">
+							<li>ERS Scores</li>
+							<li>ECERS/ITERS Trigger Item Summary Sheet</li>
+							<li>Inclusion Support Questions</li>
+							<li>TAS and Site Staff Observation Log</li>
+						</ul>
+					</div>
+				</div>
     </body>
-
-
 </html>

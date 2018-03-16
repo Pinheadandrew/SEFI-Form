@@ -30,3 +30,30 @@ body{
 .numberfield{
     width: 40px;
 }
+
+/* Text styles */
+.subheaders{
+	text-decoration: underline;
+	font-style: italic;
+}
+
+.coolbullets li{
+	list-style-type: lower-greek;
+}
+
+textarea{
+	font-family: sans-serif;
+}
+#header{
+	background-color: darkgray;
+	padding-left: 20px;
+}
+            input{
+                border-radius: 4px;
+            }
+
+/* Header components */
+#header{
+	background-color: darkgray;
+	padding-left: 20px;
+}

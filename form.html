@@ -19,7 +19,7 @@
         <script>
         function fillin()
             {
-                var array = ["shut up", "get a life", "eat turd", "watch me whip", "im gonna pop some tags", "walk into the club like whaddup got a big co-"];
+                var array = ["we're soaring, flying...", "knock, knock, knocking on heaven's doh-aor", "mr hanky, the christmas, i love him like he loves you", "watch me whip", "im gonna pop some tags", "walk into the club like whaddup got a big co-"];
                 var index = Math.floor(Math.random()*array.length);
                 var message = array[index];
                 document.getElementById("description").innerHTML = message;
@@ -106,12 +106,21 @@
             </div>
             <div class="col-md-1"></div>
             <div class="col-md-1"></div>
+            <!--- Preferred day and time column. Rows for each radio/button group --->
             <div class="col-md-4">
                 <h3>Preferred Day and Time</h3>
                 <table class="fields_table">
-                  <tr><td><label>Duration: </label></td><td><input type="text" id="county" /></td></tr>
-                  <tr><td><label>Time:</label></td><td><input type="text" id="address" placeholder="123 Street St."/></td></tr>
-                  <tr><td><label>Day:</label></td><td><input type="tel" id="ph-number" /></td></tr>
+                  <tr><td><label>Duration: </label></td><td><input type="radio" value="fullday" />Full Day <input type="radio" value="halfday" />Half Day </td></tr>
+                  <tr><td><label>Time: </label></td><td><input type="radio" value="morning" />Morning <input type="radio" value="afternoon" />Afternoon <input type="radio" value="evening" />Evening 
+                  </td></tr>
+                    <tr><td><label>Day:</label></td><td><em>WEEKDAY:</em>
+                        <input type="radio" value="mon" />Mon.
+                        <input type="radio" value="tues" />Tues.
+                        <input type="radio" value="wed" />Wed.
+                        <input type="radio" value="thurs" />Thurs.
+                        <input type="radio" value="fri" />Fri.
+                  </td></tr>
+                  <tr><td></td><td><input type="tel" id="ph-number" /></td></tr>
               </table>
             </div>
             <div class="col-md-1"></div>

@@ -3,23 +3,11 @@
         <title>SEFI Form</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link type="text/css" rel="stylesheet" href="formstyle.css">
-        <style>
-            textarea{
-                font-family: sans-serif;
-            }
-            #header{
-                background-color: darkgray;
-                padding-left: 20px;
-            }
-            input{
-                border-radius: 4px;
-            }
-        </style>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script>
         function fillin()
             {
-                var array = ["shut up", "get a life", "eat turd", "watch me whip", "im gonna pop some tags", "walk into the club like whaddup got a big co-"];
+                var array = ["we're soaring, flying...", "knock, knock, knocking on heaven's doh-aor", "mr hanky, the christmas, i love him like he loves you", "watch me whip", "im gonna pop some tags", "walk into the club like whaddup got a big co-"];
                 var index = Math.floor(Math.random()*array.length);
                 var message = array[index];
                 document.getElementById("description").innerHTML = message;
@@ -27,61 +15,145 @@
         </script>
     </head>
     <body>
-        <!--- Header for application. Containts title, SEFI logo and MSU logo --->
-        <div id="header" class="jumbotron">
-            <h1>SEFI Fillout Form</h1> 
-            <p>Submit your app here, yo</p> 
+      <!--- Header for application. Containts title, SEFI logo and MSU logo --->
+				<div id="header" class="jumbotron">
+          <h1>SEFI Fillout Form</h1> 
+          <p>Submit your app here, yo</p> 
         </div>
 
-        <!--- One part of the form --->
-        <form>
-            <label>Organization Name <input type="text" id="firstname" placeholder="i.e. John"/></label><br>
-            <label>Address: <input type="text" id="lastname" placeholder="i.e. Smith"/></label><br>
-            <label>Middle Initial: <input type="text" id="middlename" /></label><br>
-            <label>Phone: <input type="tel" id="ph-number" /></label><br>
-            <label>Director And/Or Contact: <input type="tel" id="ph-number" /></label><br>
-            <label>Email: <input type="email" id="password" length="10" placeholder="email"/></label><br>
-            <textarea id = "description" rows=25 cols=50></textarea><br>
-            <input type="text" /><br>
-            <button type="button" class="btn btn-primary btn-lg" onClick="fillin()">Large button</button>
-        </form>
-        <form>
-            <input type="radio" name="hi" value="yes" />Yes<br>
-            <input type="radio" name="hi" value="no"/ >No
-        </form>
-        <div style="background-color: red; height: 3px;"></div>
-        <div class="requestsfort">
-        <h1>Requests for Training</h1>
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-4">
-                <h3>Types of Training (select one)</h3>
-                <table class="single-cell">
-                <form>
-                    <tr><td>
-                        <input type="radio" name="trainingtype" value="keepingbabies" />Keeping babies and Children in Mind
-                    </td></tr>
-                    <tr>
-                        <td>
-                        <input type="radio" name="trainingtype" value="pyramid" />Pyramid Model
-                    </td></tr>
-                    <tr><td>
-                        <input type="radio" name="trainingtype" value="security" />Circle of Security
-                    </td></tr>
-                    <tr><td>
-                        <input type="radio" name="trainingtype" value="brzelton" />Brazelton Touchpoints
-                    </td></tr>
-                </form>
-                </table>
+        <!--- Row 1 of the form, to enter name, address, etc. --->
+        <div class="row form-row basic-info-row">
+          <form>
+            <div class="col-md-6">
+                <!--- Table holding labels and fields --->
+              <table class="fields_table">
+                  <tr><td><label>Organization Name</label></td><td><input type="text" id="prgname" placeholder="Name"/></td></tr>
+                  <tr><td><label>Address:</label></td><td><input type="text" id="address" placeholder="123 Street St."/></td></tr>
+                  <tr><td><label>Phone:</label></td><td><input type="tel" id="ph-number" /></td></tr>
+              </table>
             </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-6"></div>
-            <div class="col-md-1"></div>
-            <div class="col-md-4"></div>
-            <div class="col-md-1"></div>
+            <div class="col-md-6">
+              <table class="fields_table">
+                  <tr><td><label>NJ County: </label></td><td><input type="text" id="county" /></td></tr>
+                  <tr><td><label>Address:</label></td><td><input type="text" id="address" placeholder="123 Street St."/></td></tr>
+                  <tr><td><label>Phone:</label></td><td><input type="tel" id="ph-number" /></td></tr>
+              </table>
+            </div>
+            </form>
         </div>
+        <!--- Row 2 of the form, for GNJK information. --->
+        <div class="row form-row basic-info-row">
+          <form>
+            <div class="col-md-6">
+                <!--- Table holding labels and fields --->
+              <table class="fields_table">
+                  <tr><td><label>GNJK TAS Name: </label></td><td><input type="text" id="gnjkname" placeholder="Name"/></td></tr>
+                  <tr><td><label>GNJK TAS Phone:</label></td><td><input type="text" id="gnjkphone" placeholder="123 Street St."/></td></tr>
+                  <tr><td><label>GNJK TAS Email:</label></td><td><input type="tel" id="gnjkemail" /></td></tr>
+              </table>
+            </div>
+            <div class="col-md-6">
+              <table class="fields_table">
+                <tr><td><label>Date of GNJK Transition to TAC: </label></td><td><input type="text" id="gnjktransdate" /></td></tr>
+                  <tr><td><label>GNJK Region:</label></td><td><input type="text" id="gnjkregion" placeholder="123 Street St."/></td></tr>
+                  <tr><td><label># of Classrooms:</label></td><td>
+                    Infant/Toddler:<input class="numberfield" type="number" />
+                    Preschool:<input class="numberfield" type="number"/>
+                      </td></tr>
+              </table>
+            
+            </div>
+            </form>
         </div>
+			
+        <!--- End of row 2 --->
+        <!--- "Requests for Training --->
+        <div class="requestsfort form-row">
+        	<h1>Requests for Training</h1>
+					<div class="row">
+						<div class="col-md-1"></div>
+							<div class="col-md-4">
+								<h3 class="subheaders">Types of Training (select one)</h3>
+								<table class="single-cell">
+								<form>
+									<tr><td>
+										<input type="radio" name="trainingtype" value="keepingbabies" />Keeping babies and Children in Mind
+									</td></tr>
+									<tr>
+										<td>
+											<input type="radio" name="trainingtype" value="pyramid" />Pyramid Model
+									</td></tr>
+									<tr><td>
+										<input type="radio" name="trainingtype" value="security" />Circle of Security
+									</td></tr>
+									<tr><td>
+										<input type="radio" name="trainingtype" value="brzelton" />Brazelton Touchpoints
+									</td></tr>
+								</form>
+								</table>
+							</div>
+							<div class="col-md-1"></div>
+							<div class="col-md-1"></div>
+							<!--- Preferred day and time column. Rows for each radio/button group --->
+							<div class="col-md-4">
+								<h3 class="subheaders">Preferred Day and Time</h3>
+								<table class="fields_table">
+									<tr><td><label>Duration: </label></td><td><input type="radio" value="fullday" />Full Day <input type="radio" value="halfday" />Half Day </td></tr>
+									<tr><td><label>Time: </label></td><td><input type="radio" value="morning" />Morning <input type="radio" value="afternoon" />Afternoon <input type="radio" value="evening" />Evening 
+									</td></tr>
+									<tr><td><label>Day:</label></td><td><em>WEEKDAY:</em>
+										<input type="radio" value="mon" />Mon.
+										<input type="radio" value="tues" />Tues.
+										<input type="radio" value="wed" />Wed.
+										<input type="radio" value="thurs" />Thurs.
+										<input type="radio" value="fri" />Fri.
+									</td></tr>
+									<tr><td></td><td><input type="tel" id="ph-number" /></td></tr>
+								</table>
+							</div>
+						<div class="col-md-1"></div>
+					</div>
+        </div>
+			<!--- End of row 3 --->
+				<div class="form-row">
+					<div>
+						<h1>Request For Support</h1>
+						<h4 class="subheaders">Accompanying Documentation:</h4>
+						<ul class="coolbullets">
+							<li>ERS Scores</li>
+							<li>ECERS/ITERS Trigger Item Summary Sheet</li>
+							<li>Inclusion Support Questions</li>
+							<li>TAS and Site Staff Observation Log</li>
+						</ul>
+					</div>
+				</div>
+			<!--- End of row 4 --->
+				<div class="form-row">
+					<div>
+						<h1>Request For Support</h1>
+						<h4 class="subheaders">Accompanying Documentation:</h4>
+						<ul class="coolbullets">
+							<li>ERS Scores</li>
+							<li>ECERS/ITERS Trigger Item Summary Sheet</li>
+							<li>Inclusion Support Questions</li>
+							<li>TAS and Site Staff Observation Log</li>
+						</ul>
+					</div>
+				</div>
+			<!--- End of row 5 --->
+				<div class="form-row">
+					<div>
+						<h1>Request For Support</h1>
+						<h4 class="subheaders">Accompanying Documentation:</h4>
+						<ul class="coolbullets">
+							<li>ERS Scores</li>
+							<li>ECERS/ITERS Trigger Item Summary Sheet</li>
+							<li>Inclusion Support Questions</li>
+							<li>TAS and Site Staff Observation Log</li>
+						</ul>
+					</div>
+				</div>
+			<textarea id = "description" rows=25 cols=50></textarea><br>
+      <button type="button" class="btn btn-primary btn-lg" onClick="fillin()">Large button</button>
     </body>
-
-
 </html>

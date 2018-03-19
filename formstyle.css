@@ -23,9 +23,14 @@ body{
     text-align: center;
 }
 
-.basic-info-row{
+.form-row{
     padding: 20px 5px 20px 5px;
     border-top: black solid 2px;
+		margin: 0 auto;
+}
+/* Rows of form that contain the fields for contact info, etc.*/
+.basic-info-row{
+		width: 70%;
 }
 .numberfield{
     width: 40px;

@@ -22,7 +22,7 @@
         </div>
 
         <!--- Row 1 of the form, to enter name, address, etc. --->
-        <div class="row basic-info-row">
+        <div class="row form-row basic-info-row">
           <form>
             <div class="col-md-6">
                 <!--- Table holding labels and fields --->
@@ -42,7 +42,7 @@
             </form>
         </div>
         <!--- Row 2 of the form, for GNJK information. --->
-        <div class="row basic-info-row">
+        <div class="row form-row basic-info-row">
           <form>
             <div class="col-md-6">
                 <!--- Table holding labels and fields --->
@@ -68,9 +68,7 @@
 			
         <!--- End of row 2 --->
         <!--- "Requests for Training --->
-        <textarea id = "description" rows=25 cols=50></textarea><br>
-        <button type="button" class="btn btn-primary btn-lg" onClick="fillin()">Large button</button>
-        <div class="requestsfort basic-info-row">
+        <div class="requestsfort form-row">
         	<h1>Requests for Training</h1>
 					<div class="row">
 						<div class="col-md-1"></div>
@@ -116,7 +114,8 @@
 						<div class="col-md-1"></div>
 					</div>
         </div>
-				<div class="basic-info-row">
+			<!--- End of row 3 --->
+				<div class="form-row">
 					<div>
 						<h1>Request For Support</h1>
 						<h4 class="subheaders">Accompanying Documentation:</h4>
@@ -128,5 +127,33 @@
 						</ul>
 					</div>
 				</div>
+			<!--- End of row 4 --->
+				<div class="form-row">
+					<div>
+						<h1>Request For Support</h1>
+						<h4 class="subheaders">Accompanying Documentation:</h4>
+						<ul class="coolbullets">
+							<li>ERS Scores</li>
+							<li>ECERS/ITERS Trigger Item Summary Sheet</li>
+							<li>Inclusion Support Questions</li>
+							<li>TAS and Site Staff Observation Log</li>
+						</ul>
+					</div>
+				</div>
+			<!--- End of row 5 --->
+				<div class="form-row">
+					<div>
+						<h1>Request For Support</h1>
+						<h4 class="subheaders">Accompanying Documentation:</h4>
+						<ul class="coolbullets">
+							<li>ERS Scores</li>
+							<li>ECERS/ITERS Trigger Item Summary Sheet</li>
+							<li>Inclusion Support Questions</li>
+							<li>TAS and Site Staff Observation Log</li>
+						</ul>
+					</div>
+				</div>
+			<textarea id = "description" rows=25 cols=50></textarea><br>
+      <button type="button" class="btn btn-primary btn-lg" onClick="fillin()">Large button</button>
     </body>
 </html>

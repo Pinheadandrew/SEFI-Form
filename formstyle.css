@@ -1,10 +1,18 @@
+/* Area of stylesheet for general styles of elements, including Bootstrap classes. */ 
+
 body{
     background-color: aqua;
 }
 .col-md-4{
     background-color: red;
 }
-
+h1{
+	font-weight: 700;
+}
+input{
+	border-radius: 4px;
+	padding: 3px 2px 3px 2px;
+	}
 .requestsfort td{
     background-color: white;
     padding-bottom: 30px;
@@ -23,6 +31,7 @@ body{
     text-align: center;
 }
 
+/* Row styles */
 .form-row{
     padding: 20px 5px 20px 5px;
     border-top: black solid 2px;
@@ -49,13 +58,6 @@ body{
 textarea{
 	font-family: sans-serif;
 }
-#header{
-	background-color: darkgray;
-	padding-left: 20px;
-}
-            input{
-                border-radius: 4px;
-            }
 
 /* Header components */
 #header{

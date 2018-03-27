@@ -1,4 +1,8 @@
-<!--- THE SCRIPT TO INSERT NEW FORM INTO THE DATABASE ON THE XAMPP DEVELOPMENT SERVER --->
+<!--- THE SCRIPT TO INSERT NEW FORM INTO THE SERVER --->
 <?php
-	echo $_POST["orgname"];
+
+	foreach($_POST as $inputfield => $value)
+	{
+		echo $inputfield.": ".$value."<br>";
+	}
 ?>

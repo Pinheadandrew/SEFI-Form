@@ -58,6 +58,11 @@ input{
 textarea{
 	font-family: sans-serif;
 }
+.comment-label{
+	color: red;
+	text-decoration: underline;
+	font-weight: 600;
+}
 
 /* Header components */
 #header{

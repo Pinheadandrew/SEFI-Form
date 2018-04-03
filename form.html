@@ -189,15 +189,39 @@
     <!--- End of row 5 --->
       <div>
         <h1>GNJK TAS Comments</h1>
-        <h4 class="subheaders">Accompanying Documentation:</h4>
-        <ul class="coolbullets">
-          <li>ERS Scores</li>
-          <li>ECERS/ITERS Trigger Item Summary Sheet</li>
-          <li>Inclusion Support Questions</li>
-          <li>TAS and Site Staff Observation Log</li>
-        </ul>
+        <h3 class="comment-label">General:</h3>(e.g., aspects of the physical and/or relational environment posing a challenge to optimal growth and development.)
+				<input type="file" name="tas-general-comments-upload">
+				<h3 class="comment-label">Specific:</h3>(e.g., specific behaviors that a teacher(s) finds challenging.)
+				<input type="file" name="tas-specific-comments-upload">
       </div>
     </div>
+		<!--- End of row 6 --->
+		<!--- Row 7: "Center Director Comments" --->
+		<div class="form-row">
+      <div>
+        <h1>Center Director Comments</h1>
+        <h3 class="comment-label">General:</h3>(e.g., aspects of the physical and/or relational environment posing a challenge to optimal growth and development.)
+				<input type="file" name="director-general-comments-upload">
+				<h3 class="comment-label">Specific:</h3>(e.g., specific behaviors that a teacher(s) finds challenging.)
+				<input type="file" name="director-specific-comments-upload">
+      </div>
+    </div>
+		<!--- End of row 7 --->
+		<!--- Row 8: "Site Staff Observation Log" --->
+		<div class="form-row">
+      <div>
+        <h1>Site Staff Observation Log (if applicable):</h1>
+        <h3 class="comment-label">Specific:</h3>(e.g. A running anecdotal log of specific behaviors that are challenging – behaviors that are hindering the optimal growth
+				and development of children and/or behaviors that are disrupting classroom function.)
+				<input type="file" name="sitestaff-comments-upload">
+				<h3 class="comment-label">Directions/Guidance:</h3>(When writing an anecdotal log of specific challenging behaviors, please try to note as many facts as
+				possible. Some things to consider: When did the behaviors occur? What happened before and after the behaviors? Who was involved
+				(please list all parties)? Please be specific when logging all language used by staff and children.)
+				<input type="file" name="sitestaff-directions-upload">
+      </div>
+    </div>
+		<!--- End of row 8 --->
+		
     <textarea id="description" rows=25 cols=50></textarea><br>
     <button type="button" class="btn btn-primary btn-lg" onClick="fillin()">Large button</button><br>
     <input type="submit" value="Submit Form" />

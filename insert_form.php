@@ -3,6 +3,14 @@
 
 	foreach($_POST as $inputfield => $value)
 	{
-		echo $inputfield.": ".$value."<br>";
+		echo $inputfield.": ".$value;
+		
+		if (strpos($inputfield, 'upload') !== false) 
+		{
+    	echo ' (This is also a file upload field)';
+		}
+		echo "<br>";
 	}
+	
+	include "functions/save_upload.php";
 ?>

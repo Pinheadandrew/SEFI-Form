@@ -26,4 +26,13 @@
 		echo "</tr>";
 	}
 echo "</table>";
+$stuff = array("git"=> "good", "gg"=> "ez",);
+
+foreach ($stuff as $key => $value)
+{
+	if($key == "git")
+	{
+		echo "git gud";
+	}
+}
 ?>

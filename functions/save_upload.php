@@ -1,5 +1,6 @@
 <?php
-	/* Script of function that would take string for title of field and store it in a directory based on which field it was submitted through. It's in the works. */
+	/* Script of function that would take string for title of field and store it in a directory based on which field it was submitted through. It's in the works. 
+		 Based off of W3Schools file upload example, https://www.w3schools.com/php/php_file_upload.asp */
 		
 	$target_dir = $file_field."/";
 	if(!is_writable($target_dir))

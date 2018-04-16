@@ -1,0 +1,8 @@
+-Place restrictions on certain inputs. Examples:
+		--Date values must match certain format
+		--E-mail format
+-For
+-Work on successful LDAP function, simple test of looking up username.
+-Admin-access pages, including SEFI header on web page.
+	-Admin login page
+	-Admin page that shows forms, 

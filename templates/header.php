@@ -1,5 +1,3 @@
-<?php
-?>
 <html>
 
 <head>
@@ -22,8 +20,5 @@
 <body>
   <!--- Header for application. Containts title, SEFI logo and MSU logo --->
   <div id="header" class="jumbotron">
-    <h1>SEFI Fillout Form</h1>
-    <p>Submit your app here, yo</p>
+    <h1>Socio-Emotional Formation Initiative (SEFI)</h1>
   </div>
-<?php
-?>

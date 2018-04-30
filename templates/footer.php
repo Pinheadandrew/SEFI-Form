@@ -1,4 +1,2 @@
-<?php ?>
-	</body>
+</body>
 </html>
-<?php ?>

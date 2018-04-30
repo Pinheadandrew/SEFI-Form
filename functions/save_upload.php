@@ -24,15 +24,15 @@
 				$uploadOk = 0;
 		}
 		// Check file size
-		if ($file["size"] > 500000) 
+		if ($file["size"] > 5000000) 
 		{
 				echo "Sorry, your file is too large.<br>";
 				$uploadOk = 0;
 		}
 		// Allow certain file formats
-		if($fileType != "doc" && $fileType != "docx") 
+		if($fileType != "doc" && $fileType != "docx" && $fileType != "pdf") 
 		{
-				echo "Sorry, only .doc and .docx files are allowed.<br>";
+				echo "Sorry, only .doc, .docx, and .pdf files are allowed.<br>";
 				$uploadOk = 0;
 		}
 		// Check if $uploadOk is set to 0 by an error

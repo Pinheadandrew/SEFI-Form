@@ -4,6 +4,6 @@
 
 if(!$db)
 {
-    echo "Nooooo!";
+    echo "There was an error connecting to the database.";
 }
 ?>

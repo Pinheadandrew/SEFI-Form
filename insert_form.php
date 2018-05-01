@@ -3,8 +3,7 @@
 	require "dbconnect.php";
 	$insertValues = array();
 		
-	// Stores name of each input element and what has been submitted in dictionary $queryArguments so inputs later used in query string. If a field is empty, send them back
-	// to form page with message that their was a missing field in their submission. Keep commented until database and file insertion portions completed.
+	// Stores name of each input element and what has been submitted in dictionary $queryArguments so inputs later used in query string.
 	foreach($_POST as $inputfield => $value)
 	{
 		$insertValues[$inputfield] = htmlspecialchars($value);
@@ -41,13 +40,13 @@
 			'".$insertValues['classlevel']."',
 			'".$classSize."',
 			'','',
-            'sitestaff-comments/".$_FILES['sitestaff-comments']['name']."',
-            'sitestaff-directions/".$_FILES['sitestaff-directions']['name']."',
-            'tas-general-comments/".$_FILES['tas-general-comments']['name']."',
-            'tas-specific-comments/".$_FILES['tas-specific-comments']['name']."',
-            'director-general-comments/".$_FILES['director-general-comments']['name']."',
-            'director-specific-comments/".$_FILES['director-specific-comments']['name']."'
-            )";
+      '".$_FILES['sitestaff-comments']['name']."',
+      '".$_FILES['sitestaff-directions']['name']."',
+      '".$_FILES['tas-general-comments']['name']."',
+      '".$_FILES['tas-specific-comments']['name']."',
+      '".$_FILES['director-general-comments']['name']."',
+      '".$_FILES['director-specific-comments']['name']."'
+       )";
 	
 	$db->query($insert_query);
 	if($db->error)
@@ -56,14 +55,15 @@
 	}
 	else
 	{ 	
-    // If submission is acceptable, upload the files to the server too. Print file field names and the name of the submitted files.
+    // If submission is acceptable, upload the files to the server too. The script 
+		// save_upload.php takes care of further checks in validating a file submission.
 			echo $insert_query."<br>";
 			echo "Your form was submitted succesfully. Expect a period of up to two weeks to hear back on your request's approval.<br>";
-			echo '<strong>Files Uploads: '.count($_FILES).' of them</strong><br>';
+		
 			foreach($_FILES as $file_field => $file)
 			{
 				$f_name = $file['name'];
-				echo "<strong>".$file_field.": ".$f_name."</strong><br>";
+				echo "$file_field/$f_name";
 				include "functions/save_upload.php";
 			}
 	}

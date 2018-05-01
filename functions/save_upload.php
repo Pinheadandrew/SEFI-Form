@@ -1,24 +1,20 @@
 <?php
-	/* Script of function that would take string for title of field and store it in a directory based on which field it was submitted through. It's in the works. 
-		 Based off of W3Schools file upload example, https://www.w3schools.com/php/php_file_upload.asp */
+	/* Script of function that would take string for title of field and store it in a 
+	directory based on which field it was submitted through. It's in the works. Based off of W3Schools file upload example, https://www.w3schools.com/php/php_file_upload.asp */
 		
-	$target_dir = $file_field."/";
+	$target_dir = $file_field;
 	if(!is_writable($target_dir))
 	{
 		echo "Directory NOT Writable.<br>";
 	}
 	else
 	{
-		$target_file = $target_dir.basename($f_name);
+		$target_file = basename($f_name);
 		$uploadOk = 1;
 		$fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
-		if(!isset($_POST["submit"])) 
-		{
-			echo "No file uploaded yet!<br>";
-		}
 		// Check if file already exists
-		if (file_exists($target_file)) 
+		if (file_exists("$target_dir/$target_file")) 
 		{
 				echo "Sorry, file already exists.<br>";
 				$uploadOk = 0;
@@ -42,7 +38,7 @@
 		} 
 		else 
 		{
-			if (move_uploaded_file($file["tmp_name"], $target_file)) 
+			if (move_uploaded_file($file["tmp_name"], "$target_dir/$target_file")) 
 			{
 					echo "The file ". basename($f_name). " has been uploaded.<br>";
 			} 

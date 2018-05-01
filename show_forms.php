@@ -1,10 +1,6 @@
 <!--- THE SHOW FORM SCRIPT ON THE SERVER --->
 <?php
 	session_start();
-//	if (!$_SESSION["admin_login"])
-//	{
-//		header("Location: admin_login.html");;
-//	}
 
 	include "templates/header.php";
 	require "dbconnect.php";
@@ -14,7 +10,6 @@
 	
 	$select = "SELECT * FROM form";
 	$forms = $db->query($select);
-	$field_info = $forms->fetch_fields();
 	echo "<table>";
 ?>
 	<tr>
@@ -26,23 +21,36 @@
 		<th>Center Director General Comments</th><th>Center Director Specific Comments</th>
 	</tr>
 <?php
-	// Prints out each form that has been submitted and stored. 
-	while($result = $forms->fetch_array(MYSQLI_NUM))
+	// Prints out each form that has been submitted and stored as row in table. If an attribute for an instance is null, print EMPTY in place of it.
+	while($resultrow = $forms->fetch_assoc())
 	{
 		echo "<tr>";
-		foreach($result as $attr)
+		
+		foreach($resultrow as $attrName => $value)
 		{
 			echo "<td>";
-			if ($attr == null || $attr == "")
+			
+			if ($value == null || $value == "")
 			{
 				echo "EMPTY";
 			}
 			else
 			{
-				echo $attr;
+				// If name of attribute being looped over is filename string, make a download link for it from the directory made for files of that attribute.
+				if (strpos($attrName, 'filepath') !== false) 
+				{
+					$directory_name = str_replace("-filepath", "", $attrName);
+    			echo "<a href='$directory_name/$value' download target='_blank'>$value</a>";
+				}
+				else
+				{
+					echo $value;
+				}
 			}
+			
 			echo "</td>";
 		}
+		
 		echo "</tr>";
 	}
 echo "</table>";
